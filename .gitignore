@@ -1,0 +1,17 @@
+# Private SSH keys & credentials
+*_key
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Local runbook & scratch notes
+runbook.txt
+*.tmp
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Logs & monitoring output
+*.log
