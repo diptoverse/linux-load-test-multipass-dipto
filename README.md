@@ -21,6 +21,14 @@ User Creation through a script.
 
 The script is idempotent which means it can be run twice without trying to create the same user again.
 
+### Part 2: Give It Scratch Storage
+
+Give the service a fast temporary workspace using `tmpfs`.
+
+`scripts/02_setup_tmpfs.sh`
+
+The script creates a 256 MB `tmpfs` mount at `/mnt/bgdsvc_dipto_tmp` and gives ownership to the service account.
+
 ## Parts
 
 * **Part 1:** Create the user
