@@ -23,11 +23,21 @@ The script is idempotent which means it can be run twice without trying to creat
 
 ### Part 2: Give It Scratch Storage
 
-Give the service a fast temporary workspace using `tmpfs`.
+Giving the service a fast temporary workspace using `tmpfs`.
 
 `scripts/02_setup_tmpfs.sh`
 
 The script creates a 256 MB `tmpfs` mount at `/mnt/bgdsvc_dipto_tmp` and gives ownership to the service account.
+
+### Part 3: Stress It
+
+Putting the service environment under controlled load and observe how the system responds.
+
+`scripts/03_stress_and_populate.sh`
+
+The script supports CPU, memory, disk, and combined stress testing.
+
+The tests show how the system behaves when its resources are pushed toward their limits.
 
 ## Parts
 
